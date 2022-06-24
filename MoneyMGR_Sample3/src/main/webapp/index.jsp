@@ -5,8 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>お金情報記録アプリ</title>
+<link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
+
 <!-- 見出しもじ -->
 <h1>お金情報記録アプリへようこそ</h1>
 <!-- ログインフォーム -->

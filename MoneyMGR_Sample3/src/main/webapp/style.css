@@ -1,0 +1,23 @@
+body{
+  background: aliceblue;
+  font-size: 16px;
+  font-family: fantasy;
+}
+
+h1{
+  background-color: lightblue;
+  color: navy;
+  text-align: center;
+}
+h2{
+  color: navy;
+}
+
+a{
+  cursor: pointer;
+}
+
+form:focus{
+    outline: 0;
+    box-shadow: 0 0 0 2px rgb(33, 150, 243) inset;
+}

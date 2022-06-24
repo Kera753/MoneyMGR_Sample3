@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>ログイン完了画面</title>
+<title>ログアウト</title>
 <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
-<p>登録完了しました</p>
-<a href="/MonneyMGR_Sample3/RegisterUser">戻る</a>
+<h1>ログアウト</h1>
+<a href="/MoneyMGR_Sample3/">トップへ</a>
 </body>
 </html>

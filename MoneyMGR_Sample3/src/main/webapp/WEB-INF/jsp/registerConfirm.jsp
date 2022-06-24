@@ -9,6 +9,7 @@ MyAccount registerUser = (MyAccount) session.getAttribute("registerUser");
 <head>
 <meta charset="UTF-8">
 <title>ユーザ登録</title>
+<link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
 <p>下記のユーザーを登録します</p>

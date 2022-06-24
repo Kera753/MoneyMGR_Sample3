@@ -4,21 +4,38 @@ import java.io.Serializable;
 
 public class FriendAccount implements Serializable {
 	  private String userName; // ユーザー名
-	  private String text; 
+	  private int credit;
+	  private int debt;
+	  
+	  private String text;
 
 	  public FriendAccount() {
 	  }
 
-	  public FriendAccount(String userName, String text) {
+	  public FriendAccount(String userName, int credit, int debt) {
 	    this.userName = userName;
-	    this.text = text;
+	    this.credit = credit;
+	    this.debt = debt;
+	  }
+	  
+	  public FriendAccount(String userName, String text) {
+		    this.userName = userName;
+		    this.text = text;
 	  }
 
 	  public String getUserName() {
 	    return userName;
 	  }
-
+	  
+	  public int getCredit() {
+		    return credit;
+		  }
+	  
 	  public String getText() {
-	    return text;
+		    return text;
+		  }
+
+	  public int getDebt() {
+	    return debt;
 	  }
 }

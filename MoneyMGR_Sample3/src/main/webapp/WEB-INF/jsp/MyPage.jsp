@@ -14,14 +14,15 @@ String errorMsg = (String) request.getAttribute("errorMsg");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>マイページ</title>
 </head>
+<link rel="stylesheet" href="style.css" type="text/css"/>
 
 <body>
 <h1>マイページ</h1>
 <p>
 <%= loginUser.getAccName() %>さん、ログイン中
-<a href="//MoneyMGR_Sample3/Logout">ログアウト</a>
+<a href="/MoneyMGR_Sample3/Logout">ログアウト</a>
 </p>
 <p><a href="//MoneyMGR_Sample3/Main">更新</a></p>
 <h2>貸す金額</h2>
@@ -43,7 +44,12 @@ String  debtV= request.getParameter("debtValue");
 
 <h3> 貸金は<%= creditV %> </h3>
 <h3> 借金は<%= debtV %> </h3>
-
+<!--
+<!-- pleaseDeleteFrom -->
+<% for(FriendAccount friend : friendList) {%>
+　<p><%= friend.getUserName() %>：<%= friend.getCredit() %>:<%= friend.getDebt() %></p>
+<% } %>
+<!-- pleaseDeleteEnd -->
 
 
 

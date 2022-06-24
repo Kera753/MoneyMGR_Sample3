@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ユーザ登録</title>
+<link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
 <form action="/MoneyMGR_Sample3/RegisterUser" method="post">

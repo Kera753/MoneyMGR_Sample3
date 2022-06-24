@@ -15,7 +15,6 @@ import javax.servlet.http.HttpSession;
 
 import model.FriendAccount;
 import model.MyAccount;
-import model.PostFriendLogic;
 /**
  * Servlet implementation class Main
  */
@@ -58,33 +57,39 @@ public class Main extends HttpServlet {
 	  protected void doPost(HttpServletRequest request,
 	      HttpServletResponse response)
 	      throws ServletException, IOException {
-
+			/*pleaseDeleteFrom
 	    // リクエストパラメータの取得
 	    request.setCharacterEncoding("UTF-8");
-	    String text = request.getParameter("text");
+	    String creditValue = request.getParameter("creditV");
+	    String debtValue = request.getParameter("debtV");
+	    int credit =  Integer.parseInt(creditValue);
+	    int debt =  Integer.parseInt(debtValue);
 
 	    // 入力値チェック
-	    if (text != null && text.length() != 0) {
+	    if (credit != 0 ) {
 	      // アプリケーションスコープに保存された友達リストを取得
 	      ServletContext application = this.getServletContext();
 	      List<FriendAccount> friendList =
 	          (List<FriendAccount>) application.getAttribute("friendList");
+
 
 	      // セッションスコープに保存されたユーザー情報を取得
 	      HttpSession session = request.getSession();
 	      MyAccount loginUser = (MyAccount) session.getAttribute("loginUser");
 
 	      // 友達リストに追加
-	      FriendAccount friend = new FriendAccount(loginUser.getAccName(), text);
+	      FriendAccount friend = new FriendAccount(loginUser.getAccName(), credit, debt);
 	      PostFriendLogic postFriendLogic = new PostFriendLogic();
 	      postFriendLogic.execute(friend, friendList);
+	      
 
 	      // アプリケーションスコープに友達リストを保存
 	      application.setAttribute("friendList", friendList);
 	    } else {
 	      //エラーメッセージをリクエストスコープに保存
-	      request.setAttribute("errorMsg", "メッセージを入力してください");
+	      request.setAttribute("errorMsg", "内容を確認してください");
 	    }
+	    	         */ //pleaseDeleteEnd
 
 	    // メイン画面にフォワード
 

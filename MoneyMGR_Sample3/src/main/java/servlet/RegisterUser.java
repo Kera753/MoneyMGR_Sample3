@@ -55,13 +55,17 @@ public class RegisterUser extends HttpServlet {
 
 	      // 登録後のフォワード先を設定
 	      forwardPath = "/WEB-INF/jsp/registerDone.jsp";
-	    }
+	    } 
 
 	    // 設定されたフォワード先にフォワード
 	    RequestDispatcher dispatcher =
 	        request.getRequestDispatcher(forwardPath);
 	    dispatcher.forward(request, response);
 		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
+	    RequestDispatcher toMyPageDispatcher = request.getRequestDispatcher(
+	            "/WEB-INF/jsp/login.jsp");
+	    toMyPageDispatcher.forward(request, response);
 	}
 
 	/**
@@ -71,12 +75,12 @@ public class RegisterUser extends HttpServlet {
 		// TODO Auto-generated method stub
 	    // リクエストパラメータの取得
 	    request.setCharacterEncoding("UTF-8");
-	    String id = request.getParameter("id");
+	    String id = request.getParameter("accID");
 	    String name = request.getParameter("name");
 	    String pass = request.getParameter("pass");
 
 	    // 登録するユーザーの情報を設定
-	    MyAccount registerUser = new MyAccount(id, name, pass);
+	    MyAccount registerUser = new MyAccount(id, pass, name);
 
 	    // セッションスコープに登録ユーザーを保存
 	    HttpSession session = request.getSession();

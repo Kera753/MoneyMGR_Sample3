@@ -12,6 +12,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ログイン</title>
+<link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
 <h1>ログイン処理</h1>
